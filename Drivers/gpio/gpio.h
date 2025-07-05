@@ -27,7 +27,7 @@ typedef enum
 	KEY_WAKEUP = 1,
 	KEY0,
 	KEY1,
-	FLASH_CS,
+	DATA_NCS,
 	LED2,
 	LED3,
 	ESP8266_EN,

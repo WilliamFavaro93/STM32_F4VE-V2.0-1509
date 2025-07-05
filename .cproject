@@ -36,6 +36,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Core/BSP/spi}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Core/BSP/uart}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Core/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Application}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Drivers/littlefs_port}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.2018443841" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -52,12 +55,14 @@
 									<listOptionValue builtIn="false" value="../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Core/BSP/gpio}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Core/BSP/spi}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Core/BSP/uart}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Drivers/littlefs}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Core/Inc}&quot;"/>
-									<listOptionValue builtIn="false" value="../Core/Inc"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Application}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Drivers/gpio}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Middlewares/littlefs}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Drivers/data_flash}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Drivers/log}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Drivers/littlefs_port}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1362592638" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -84,8 +89,10 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Application"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Middlewares"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -122,6 +129,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Core/BSP/spi}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Core/BSP/uart}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Drivers/littlefs_port}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.127871031" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -141,6 +149,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Core/BSP/spi}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Core/BSP/uart}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/F4VE/Drivers/littlefs_port}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1067600502" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>

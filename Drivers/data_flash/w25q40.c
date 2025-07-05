@@ -14,7 +14,7 @@
 
 /* Define to prevent recursive inclusion -------------------------------------*/
 /* Includes ------------------------------------------------------------------*/
-#include "w25q_spi.h"
+#include <w25q40.h>
 
 /* Defines -------------------------------------------------------------------*/
 /* Typedefs ------------------------------------------------------------------*/
@@ -26,8 +26,8 @@ const uint32_t Full_memory = 0x800000;//errore se sta per scrivere o leggere in 
 const uint32_t MaxFrequency; //104MHz
 static const uint32_t Timeout = 1000;
 
-extern SPI_HandleTypeDef hspi1;
-static SPI_HandleTypeDef* hspi = &hspi1;
+extern SPI_HandleTypeDef hspi3;
+static SPI_HandleTypeDef* hspi = &hspi3;
 
 jedec_id_t jedec_id = {0};
 
@@ -39,7 +39,7 @@ const uint8_t status_reg_1_size = 1;
 /* Public Functions ----------------------------------------------------------*/
 w25q_error_t _abort()
 {
-	__enable_irq();
+//	__enable_irq();
 	return W25Q_ERROR_COMM_ABORTED;
 }
 
@@ -48,12 +48,12 @@ w25q_error_t w25q_spi_read_JEDEC_ID()
 	command = W25Q_COMMAND_READ_JEDEC_ID;
 
 	//IRQ are disabled to prevent to slow down the message reception
-	__disable_irq();
-	if(HAL_SPI_Transmit(&hspi1, &command, sizeof(command), Timeout) != HAL_OK)
+//	__disable_irq();
+	if(HAL_SPI_Transmit(hspi, &command, sizeof(command), Timeout) != HAL_OK)
 		return _abort();
-	if(HAL_SPI_Receive(&hspi1, &jedec_id, sizeof(jedec_id), Timeout) != HAL_OK)
+	if(HAL_SPI_Receive(hspi, &jedec_id, sizeof(jedec_id), Timeout) != HAL_OK)
 		return _abort();
-	__enable_irq();
+//	__enable_irq();
 
 	return W25Q_ERROR_OK;
 }
@@ -62,10 +62,10 @@ w25q_error_t w25q_spi_write_enable()
 {
 	command = W25Q_COMMAND_WRITE_ENABLE;
 
-	__disable_irq();
+//	__disable_irq();
 	if(HAL_SPI_Transmit(hspi, &command, sizeof(command), Timeout) != HAL_OK)
 		return _abort();
-	__enable_irq();
+//	__enable_irq();
 
 	return W25Q_ERROR_OK;
 }

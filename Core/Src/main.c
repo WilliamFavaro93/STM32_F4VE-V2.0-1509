@@ -17,16 +17,16 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include <w25q40.h>
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "gpio.h"
-#include "flash.h"
-#include "w25q_spi.h"
-
 #include "string.h"
 #include "stdio.h"
+
+#include "../../Drivers/data_flash/flash.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

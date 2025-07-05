@@ -16,11 +16,12 @@
 #define BSP_SPI_FLASH_H_
 
 #include "stdbool.h"
+#include "stdint.h"
 
 typedef enum
 {
 	FLASH_ERROR_OK = 0,
-	FLASH_ERROR_ABORT = -1,
+	FLASH_ERROR_ABORT = 1,
 } flash_error_t;
 
 void flash_init();
@@ -30,8 +31,8 @@ bool flash_is_ready();
 bool flash_is_writeable();
 void flash_soft_reset();
 void flash_write_enable();
-flash_error_t flash_read(uint32_t address, uint8_t *data, uint8_t data_size);
-flash_error_t flash_write(uint32_t address, uint8_t *data, uint8_t data_size);
-flash_error_t flash_erase(uint32_t sector_index);
+flash_error_t flash_read(uint32_t address, uint8_t *data, uint32_t data_size);
+flash_error_t flash_write(uint32_t address, uint8_t *data, uint32_t data_size);
+flash_error_t flash_erase(uint32_t address);
 
 #endif /* BSP_SPI_FLASH_H_ */

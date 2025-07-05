@@ -47,7 +47,7 @@ gpio_t get_gpio(gpio_name_t gpio_name)
 		gpio.pin = GPIO_PIN_3;
 		gpio.mode = INPUT;
 		break;
-	case FLASH_CS:
+	case DATA_NCS:
 		gpio.port = GPIOB;
 		gpio.pin = GPIO_PIN_0;
 		gpio.mode = OUTPUT;
